@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- 主机： localhost
--- 生成日期： 2025-09-16 08:50:03
--- 服务器版本： 5.6.50-log
--- PHP 版本： 7.3.31
+-- Host: localhost:8889
+-- Generation Time: Sep 29, 2025 at 01:12 AM
+-- Server version: 8.0.40
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,37 +18,37 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库： `bods065xin01`
+-- Database: `fangliul_web`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `mobanqu_archives`
+-- Table structure for table `mobanqu_archives`
 --
 
 CREATE TABLE `mobanqu_archives` (
-  `id` int(10) NOT NULL,
-  `typeid` smallint(5) DEFAULT '0',
-  `ismake` smallint(6) DEFAULT '0',
-  `channel` smallint(6) DEFAULT '1',
-  `arcrank` smallint(6) DEFAULT '0',
+  `id` int NOT NULL,
+  `typeid` smallint DEFAULT '0',
+  `ismake` smallint DEFAULT '0',
+  `channel` smallint DEFAULT '1',
+  `arcrank` smallint DEFAULT '0',
   `title` varchar(360) DEFAULT '',
   `shorttitle` varchar(360) DEFAULT '',
   `writer` text,
   `source` varchar(130) DEFAULT '',
   `litpic` char(120) DEFAULT '',
-  `pubdate` int(10) DEFAULT NULL,
-  `senddate` int(10) DEFAULT NULL,
-  `mid` mediumint(8) DEFAULT NULL,
+  `pubdate` int DEFAULT NULL,
+  `senddate` int DEFAULT NULL,
+  `mid` mediumint DEFAULT NULL,
   `keywords` varchar(330) DEFAULT '',
   `description` varchar(255) DEFAULT '',
-  `weight` int(10) DEFAULT '0',
+  `weight` int DEFAULT '0',
   `body` mediumtext,
   `boody` varchar(11) DEFAULT NULL,
   `linkyurl` varchar(40) DEFAULT NULL,
-  `paixu` int(11) NOT NULL DEFAULT '0',
-  `lanmuid` int(11) NOT NULL DEFAULT '0',
+  `paixu` int NOT NULL DEFAULT '0',
+  `lanmuid` int NOT NULL DEFAULT '0',
   `pic1` varchar(100) DEFAULT NULL,
   `pic2` varchar(100) DEFAULT NULL,
   `pic3` varchar(100) DEFAULT NULL,
@@ -60,15 +59,15 @@ CREATE TABLE `mobanqu_archives` (
   `bodyy` text,
   `vieo` text,
   `fileiinput` varchar(300) DEFAULT NULL,
-  `hot` int(50) DEFAULT '99',
+  `hot` int DEFAULT '99',
   `product_album` varchar(1000) DEFAULT NULL COMMENT '多图',
   `ftitle` varchar(300) DEFAULT NULL,
   `ftitle1` varchar(300) DEFAULT NULL,
   `ftitle2` varchar(300) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
--- 转存表中的数据 `mobanqu_archives`
+-- Dumping data for table `mobanqu_archives`
 --
 
 INSERT INTO `mobanqu_archives` (`id`, `typeid`, `ismake`, `channel`, `arcrank`, `title`, `shorttitle`, `writer`, `source`, `litpic`, `pubdate`, `senddate`, `mid`, `keywords`, `description`, `weight`, `body`, `boody`, `linkyurl`, `paixu`, `lanmuid`, `pic1`, `pic2`, `pic3`, `pic4`, `pic5`, `pic6`, `pic7`, `bodyy`, `vieo`, `fileiinput`, `hot`, `product_album`, `ftitle`, `ftitle1`, `ftitle2`) VALUES
@@ -86,8 +85,8 @@ INSERT INTO `mobanqu_archives` (`id`, `typeid`, `ismake`, `channel`, `arcrank`, 
 (12, 14, 1, 1, 0, 'Fang Liu', '', '', '', '../upload/202504122315205127.jpg', 1744038719, NULL, NULL, '', '', 0, '<p style=\"line-height: 2em;\"><span style=\"font-size: 16px;\">Fang Liu is an assistant professor of chemistry at Stanford University. Her reserach is focused on the light induced dynamics of solid low dimensional materials and construction of low dimensional artificial structures. Prior to her current position, she was a DOE Office of Energy Efficiency and Renewable Energy (EERE) postdoctoral fellow in the group of Prof. Xiaoyang Zhu at Columbia University. Her postdoctoral research focused on using femtosecond extreme UV in probing time and angle resolved photoemission spectroscopy of 2D materials. Prior to working in Columbia, she worked under the direction of Prof. Marsha I Lester at University of Pennsylvania. She received her Ph.D. in 2015 and worked as a postdoc in the same group in 2016. At UPenn, she used time resolved spectroscopic techniques to study spectroscopy and photochemistry of Criegee intermediates. She received her B.S. in chemistry at Peking University in 2010.</span></p>', NULL, NULL, 0, 0, '', '', '', '', '', NULL, NULL, '', '', '非法文件类型', 99, '', 'Assistant Professor of Chemistry', 'fliu10@stanford.edu', 'https://scholar.google.com/citations?user=odYWw4EAAAAJ&hl=en'),
 (13, 15, 1, 1, 0, 'Amalya Johnson', '', '', '', '../upload/202504122318303712.jpg', 1744039038, NULL, NULL, '', '', 0, '<p style=\"line-height: 2em;\"><span style=\"font-size: 20px;\">PhD Student, Materials Science &amp; Engineering</span></p><p style=\"line-height: 2em;\"><span style=\"font-size: 20px;\">Undergrad: Columbia University, B.A. in Physics</span></p><p style=\"line-height: 2em;\"><span style=\"font-size: 20px;\">Hometown: Montclair, NJ</span></p><p><br/></p>', NULL, NULL, 0, 0, '', '', '', '', '', NULL, NULL, '', '', '非法文件类型', 99, '', 'Ph.D Student, Materials Science & Engineering', 'amalyaj@stanford.edu', ''),
 (14, 4, 1, 1, 0, 'TEAM', '', '', '', '../upload/202504122319338342.jpg', 1744039165, NULL, NULL, '', '', 0, '', NULL, NULL, 0, 0, '', '', '', '', '', NULL, NULL, '', '', '非法文件类型', 99, '', NULL, NULL, NULL),
-(62, 5, 1, 1, 0, '2025', '', '', '', '', 1749607215, NULL, NULL, '', '', 0, '<p>55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ludovica Guarneri,&nbsp; Thomas Bauer,&nbsp; Qitong Li,&nbsp; Jung-Hwan Song,&nbsp; Skyler Selvin,&nbsp; Ashley P. Saunders,&nbsp; Fang Liu,&nbsp; Mark L. Brongersma,&nbsp; Jorik van de Groep, Dynamic Excitonic Beam Switching with Atomically-Thin Binary Blazed Gratings. Adv. Optical Mater. 13, 2403257 (2025).</p><p>54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gang Qiang, Ashley P. Saunders, Cong T. Trinh, Na Liu, Andrew C. Jones, Fang Liu, and Han Htoon. Localized exciton emission from monolayer WS₂ nanoribbon at cryogenic temperature. Nanophotonics. 14(11), 1721-1728 (2025).</p>', NULL, NULL, 0, 0, '', '', '', '', '', NULL, NULL, '', '', '', 99, '', NULL, NULL, NULL),
-(63, 5, 1, 1, 0, '2024', '', '', '', '', 1750390471, NULL, NULL, '', '', 0, '<p>53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gregory Zaborski Jr., Paulina E. Majchrzak, Samuel Lai, Amalya C. Johnson, Ashley P. Saunders, Ziyan Zhu, Yujun Deng, Donghui Lu, Makoto Hashimoto, Z-X Shen, and Fang Liu. Macroscopic uniform 2D moiré superlattices with controllable angles. (2024, arXiv:2407.02600).</p><p>52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ashley P. Saunders, Victoria Chen, Jierong Wang, Qitong Li, Amalya C. Johnson, Amy S. McKeown-Green, Helen J. Zeng, T. Kien Mac, M. Tuan Trinh, Tony F. Heinz, Eric Pop, and Fang Liu. Direct exfoliation of nanoribbons from bulk van der Waals crystals. Small&nbsp;20 (47), 2403504 (2024).</p><p>51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jiaojian Shi, Yuejun Shen, Feng Pan, Weiwei Sun, Anudeep Mangu, Cindy Shi, Amy McKeown-Green, Parivash Moradifar, Moungi G. Bawendi, W. E. Moerner, Jennifer A. Dionne, Fang Liu, and Aaron M. Lindenberg. Solution-phase sample-averaged single-particle spectroscopy of quantum emitters with femtosecond resolution. Nat. Mater. 23(8), 1063–1069 (2024).</p><p>50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ludovica Guarneri, Qitong Li, Thomas Bauer, Jung-Hwan Song, Ashley P. Saunders, Fang Liu, Mark L. Brongersma, and Jorik van de Groep. Temperature-dependent excitonic light manipulation with atomically thin optical elements. Nano Lett. 24(21), 6240–6246 (2024). PMID: 38578061.</p><p>49&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amy S. McKeown-Green, Helen J. Zeng, Ashley P. Saunders, Jiayi Li, Jiaojian Shi, Yuejun Shen, Feng Pan, Jenny Hu, Jennifer A. Dionne, Tony F. Heinz, Stephen M. Wu, Fan Zheng, and Fang Liu. Millimeter-scale exfoliation of hBN with tunable flake thickness for scalable encapsulation. ACS Appl. Nano Mater. 7(6), 6574–6582 (2024).</p><p>48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amalya C. Johnson, Johnathan D. Georgaras, Xiaozhe Shen, Helen Yao, Ashley P. Saunders, Helen J. Zeng, Hyungjin Kim, Aditya Sood, Tony F. Heinz, Aaron M. Lindenberg, Duan Luo, Felipe H. da Jornada, and Fang Liu. Hidden phonon highways promote photoinduced interlayer energy transfer in twisted transition metal dichalcogenide heterostructures. Science Adv. 10(4), eadj8819 (2024).</p><p><br/></p>', NULL, NULL, 1, 0, '', '', '', '', '', NULL, NULL, '', '', '', 99, '', NULL, NULL, NULL),
+(62, 5, 1, 1, 0, '2025', '', '', '', '', 1749607215, NULL, NULL, '', '', 0, '<p>56&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This is a test.</p><p><br/></p><p>55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ludovica Guarneri,&nbsp; Thomas Bauer,&nbsp; Qitong Li,&nbsp; Jung-Hwan Song,&nbsp; Skyler Selvin,&nbsp; Ashley P. Saunders,&nbsp; Fang Liu,&nbsp; Mark L. Brongersma,&nbsp; Jorik van de Groep, Dynamic Excitonic Beam Switching with Atomically-Thin Binary Blazed Gratings. Adv. Optical Mater. 13, 2403257 (2025).</p><p>54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gang Qiang, Ashley P. Saunders, Cong T. Trinh, Na Liu, Andrew C. Jones, Fang Liu, and Han Htoon. Localized exciton emission from monolayer WS<sub>2</sub> nanoribbon at cryogenic temperature. Nanophotonics. 14(11), 1721-1728 (2025).</p>', NULL, NULL, 0, 0, '', '', '', '', '', NULL, NULL, '', '', '', 99, '', NULL, NULL, NULL),
+(63, 5, 1, 1, 0, '2024', '', '', '', '', 1750390471, NULL, NULL, '', '', 0, '<p>53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gregory Zaborski Jr., Paulina E. Majchrzak, Samuel Lai, Amalya C. Johnson, Ashley P. Saunders, Ziyan Zhu, Yujun Deng, Donghui Lu, Makoto Hashimoto, Z-X Shen, and Fang Liu. Macroscopic uniform 2D moir<span style=\"text-wrap-mode: wrap;\">é</span> superlattices with controllable angles. (2024, arXiv:2407.02600).</p><p>52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ashley P. Saunders, Victoria Chen, Jierong Wang, Qitong Li, Amalya C. Johnson, Amy S. McKeown-Green, Helen J. Zeng, T. Kien Mac, M. Tuan Trinh, Tony F. Heinz, Eric Pop, and Fang Liu. Direct exfoliation of nanoribbons from bulk van der Waals crystals. Small&nbsp;20 (47), 2403504 (2024).</p><p>51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jiaojian Shi, Yuejun Shen, Feng Pan, Weiwei Sun, Anudeep Mangu, Cindy Shi, Amy McKeown-Green, Parivash Moradifar, Moungi G. Bawendi, W. E. Moerner, Jennifer A. Dionne, Fang Liu, and Aaron M. Lindenberg. Solution-phase sample-averaged single-particle spectroscopy of quantum emitters with femtosecond resolution. Nat. Mater. 23(8), 1063–1069 (2024).</p><p>50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ludovica Guarneri, Qitong Li, Thomas Bauer, Jung-Hwan Song, Ashley P. Saunders, Fang Liu, Mark L. Brongersma, and Jorik van de Groep. Temperature-dependent excitonic light manipulation with atomically thin optical elements. Nano Lett. 24(21), 6240–6246 (2024). PMID: 38578061.</p><p>49&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amy S. McKeown-Green, Helen J. Zeng, Ashley P. Saunders, Jiayi Li, Jiaojian Shi, Yuejun Shen, Feng Pan, Jenny Hu, Jennifer A. Dionne, Tony F. Heinz, Stephen M. Wu, Fan Zheng, and Fang Liu. Millimeter-scale exfoliation of hBN with tunable flake thickness for scalable encapsulation. ACS Appl. Nano Mater. 7(6), 6574–6582 (2024).</p><p>48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amalya C. Johnson, Johnathan D. Georgaras, Xiaozhe Shen, Helen Yao, Ashley P. Saunders, Helen J. Zeng, Hyungjin Kim, Aditya Sood, Tony F. Heinz, Aaron M. Lindenberg, Duan Luo, Felipe H. da Jornada, and Fang Liu. Hidden phonon highways promote photoinduced interlayer energy transfer in twisted transition metal dichalcogenide heterostructures. Science Adv. 10(4), eadj8819 (2024).</p><p><br/></p>', NULL, NULL, 1, 0, '', '', '', '', '', NULL, NULL, '', '', '', 99, '', NULL, NULL, NULL),
 (64, 5, 1, 1, 0, '2023', '', '', '', '', 1750390570, NULL, NULL, '', '', 0, '<p>47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jiaojian Shi, Haowei Xu, Christian Heide, Changan HuangFu, Chenyi Xia, Felipe de Quesada, Hongzhi Shen, Tianyi Zhang, Leo Yu, Amalya Johnson, Fang Liu, Enzheng Shi, Liying Jiao, Tony Heinz, Shambhu Ghimire, Ju Li, Jing Kong, Yunfan Guo, and Aaron M. Lindenberg. Giant room-temperature nonlinearities in a monolayer Janus topological semiconductor. Nat. Comm. 14(1), 4953 (2023).</p><p>46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Niclas S. Mueller, Rakesh Arul, Gyeongwon Kang, Ashley P. Saunders, Amalya C. Johnson, Ana Sánchez-Iglesias, Shu Hu, Lukas A. Jakob, Jonathan Bar-David, Bart de Nijs, Luis M. Liz-Marzán, Fang Liu, and Jeremy J. Baumberg. Photoluminescence upconversion in monolayer WSe₂ activated by plasmonic cavities through resonant excitation of dark excitons. Nat. Comm. 14(1), 5726 (2023).</p><p>45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Qitong Li, Jung-Hwan Song, Fenghao Xu, Jorik van de Groep, Jiho Hong, Alwin Daus, Yan Joe Lee, Amalya C. Johnson, Eric Pop, Fang Liu, and Mark L. Brongersma. A Purcell-enabled monolayer semiconductor free-space optical modulator. Nat. Photonics 17(10), 897–903 (2023).</p><p>44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yin Liu, Sze Cheung Lau, Wen-Hui Cheng, Amalya Johnson, Qitong Li, Emma Simmerman, Ouri Karni, Jack Hu, Fang Liu, Mark L. Brongersma, Tony F. Heinz, and Jennifer A. Dionne. Controlling valley-specific light emission from monolayer MoS₂ with achiral dielectric metasurfaces. Nano Lett. 23(13), 6124–6131 (2023). PMID: 37347949.</p><p>43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C.J.R. Duncan, M. Kaemingk, W.H. Li, M.B. Andorf, A.C. Bartnik, A. Galdi, M. Gordon, C.A. Pennington, I.V. Bazarov, H.J. Zeng, Fang Liu, D. Luo, A. Sood, A.M. Lindenberg, M.W. Tate, D.A. Muller, J. Thom-Levy, S.M. Gruner, and J.M. Maxson. Multi-scale time-resolved electron diffraction: A case study in moiré materials. Ultramicroscopy 253, 113771 (2023).</p><p>42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yuki Kobayashi, Christian Heide, Amalya C. Johnson, Vishal Tiwari, Fang Liu, David A. Reis, Tony F. Heinz, and Shambhu Ghimire. Floquet engineering of strongly driven excitons in monolayer tungsten disulfide. Nat. Phys. 19(2), 171–176 (2023).</p><p>41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christian Heide, Yuki Kobayashi, Amalya C. Johnson, Tony F. Heinz, David A. Reis, Fang Liu, and Shambhu Ghimire. High-harmonic generation from artificially stacked 2D crystals. Nanophotonics 12(2), 255–261 (2023).</p><p>40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fang Liu. Time- and angle-resolved photoemission spectroscopy (tr-ARPES) of TMDC monolayers and bilayers. Chem. Sci. 14, 736–750 (2023). Selected and included in the 2023 most popular analytical chemistry articles collection.</p><p>39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B. Ardini, A. Bassi, A. Candeo, A. Genco, C. Trovatello, Fang Liu, X. Zhu, G. Valentini, G. Cerullo, R. Vanna, and C. Manzoni. High-throughput multimodal wide-field Fourier-transform Raman microscope. Optica 10(6), 663–670 (2023).</p><p><br/></p>', NULL, NULL, 2, 0, '', '', '', '', '', NULL, NULL, '', '', '', 99, '', NULL, NULL, NULL),
 (17, 6, 1, 1, 0, '10/25/2024 Fang is named Chambers Fellow', '', 'Fang have been named a Chambers Fellow for recognition of excellence in teaching and research.', '', '', 1729783878, NULL, NULL, '', '', 0, '<p>Fang have been named a Chambers Fellow for recognition of excellence in teaching and research.</p>', NULL, NULL, 0, 0, '', '', '', '', '', NULL, NULL, '', '', '非法文件类型', 99, '', NULL, NULL, NULL),
 (18, 6, 1, 1, 0, '04/10/2024 Ashley is awarded the Sessler Leadership Award!', '', 'W﻿e had a lot of fun presenting at the nano@stanford/NNCI Annual Conference', '', '', 1729783928, NULL, NULL, '', '', 0, '<p>A﻿shley was nominated and selected for the Sessler Leadership Award from the Stanford Chemistry Department! Congratulations, Ashley!</p>', NULL, NULL, 0, 0, '', '', '', '', '', NULL, NULL, '', '', '非法文件类型', 99, '', NULL, NULL, NULL),
@@ -135,16 +134,16 @@ INSERT INTO `mobanqu_archives` (`id`, `typeid`, `ismake`, `channel`, `arcrank`, 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `moba_admin_user`
+-- Table structure for table `moba_admin_user`
 --
 
 CREATE TABLE `moba_admin_user` (
-  `user_id` int(5) NOT NULL,
+  `user_id` int NOT NULL,
   `user_name` varchar(60) NOT NULL DEFAULT '',
   `email` varchar(60) NOT NULL DEFAULT '',
   `password` varchar(32) NOT NULL DEFAULT '',
   `add_time` varchar(32) NOT NULL DEFAULT '',
-  `last_login` int(11) NOT NULL DEFAULT '0',
+  `last_login` int NOT NULL DEFAULT '0',
   `last_ip` varchar(15) DEFAULT '',
   `lanmuid` varchar(70) DEFAULT NULL,
   `lanmuid1` varchar(50) DEFAULT NULL,
@@ -159,10 +158,10 @@ CREATE TABLE `moba_admin_user` (
   `lanmuid10` varchar(50) DEFAULT NULL,
   `lanmuid11` varchar(50) DEFAULT NULL,
   `lanmuid12` varchar(70) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
--- 转存表中的数据 `moba_admin_user`
+-- Dumping data for table `moba_admin_user`
 --
 
 INSERT INTO `moba_admin_user` (`user_id`, `user_name`, `email`, `password`, `add_time`, `last_login`, `last_ip`, `lanmuid`, `lanmuid1`, `lanmuid2`, `lanmuid3`, `lanmuid4`, `lanmuid5`, `lanmuid6`, `lanmuid7`, `lanmuid8`, `lanmuid9`, `lanmuid10`, `lanmuid11`, `lanmuid12`) VALUES
@@ -171,43 +170,43 @@ INSERT INTO `moba_admin_user` (`user_id`, `user_name`, `email`, `password`, `add
 -- --------------------------------------------------------
 
 --
--- 表的结构 `moba_book`
+-- Table structure for table `moba_book`
 --
 
 CREATE TABLE `moba_book` (
-  `id` int(11) NOT NULL,
-  `ziduan1` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '账号',
-  `ziduan2` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '密码',
-  `ziduan3` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '昵称',
-  `ziduan4` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '电话',
-  `data` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ziduan5` text COLLATE utf8_unicode_ci COMMENT '备注',
-  `ismake` int(10) NOT NULL DEFAULT '0',
-  `ziduan6` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '微信',
-  `ziduan7` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'QQ',
-  `ziduan8` varchar(200) COLLATE utf8_unicode_ci DEFAULT '0' COMMENT '余额',
-  `banjid` varchar(10) COLLATE utf8_unicode_ci DEFAULT '0',
-  `ziduan9` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '真实姓名',
-  `ziduan10` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '身份证'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='会员';
+  `id` int NOT NULL,
+  `ziduan1` varchar(80) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT '账号',
+  `ziduan2` varchar(80) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT '密码',
+  `ziduan3` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT '昵称',
+  `ziduan4` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT '电话',
+  `data` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `ziduan5` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci COMMENT '备注',
+  `ismake` int NOT NULL DEFAULT '0',
+  `ziduan6` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT '微信',
+  `ziduan7` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT 'QQ',
+  `ziduan8` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT '0' COMMENT '余额',
+  `banjid` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT '0',
+  `ziduan9` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT '真实姓名',
+  `ziduan10` varchar(300) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL COMMENT '身份证'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci COMMENT='会员';
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `moba_classt`
+-- Table structure for table `moba_classt`
 --
 
 CREATE TABLE `moba_classt` (
-  `cat_id` int(11) NOT NULL,
-  `parent_id` int(11) DEFAULT '0',
-  `paixu` int(11) DEFAULT '50',
+  `cat_id` int NOT NULL,
+  `parent_id` int DEFAULT '0',
+  `paixu` int DEFAULT '50',
   `cat_name` varchar(100) DEFAULT '',
   `typedir` char(60) DEFAULT '',
-  `ispic` int(11) DEFAULT '1',
+  `ispic` int DEFAULT '1',
   `isclass` char(11) DEFAULT '1',
-  `isabout` int(11) NOT NULL DEFAULT '1',
-  `isshuju` int(11) NOT NULL DEFAULT '1',
-  `ispicsmalll` int(11) NOT NULL DEFAULT '1',
+  `isabout` int NOT NULL DEFAULT '1',
+  `isshuju` int NOT NULL DEFAULT '1',
+  `ispicsmalll` int NOT NULL DEFAULT '1',
   `content` varchar(10) DEFAULT NULL,
   `body` text,
   `body1` text,
@@ -215,10 +214,10 @@ CREATE TABLE `moba_classt` (
   `litpic2` varchar(300) DEFAULT NULL,
   `hot` varchar(50) DEFAULT '99',
   `datae` varchar(50) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
--- 转存表中的数据 `moba_classt`
+-- Dumping data for table `moba_classt`
 --
 
 INSERT INTO `moba_classt` (`cat_id`, `parent_id`, `paixu`, `cat_name`, `typedir`, `ispic`, `isclass`, `isabout`, `isshuju`, `ispicsmalll`, `content`, `body`, `body1`, `litpic1`, `litpic2`, `hot`, `datae`) VALUES
@@ -245,22 +244,22 @@ INSERT INTO `moba_classt` (`cat_id`, `parent_id`, `paixu`, `cat_name`, `typedir`
 -- --------------------------------------------------------
 
 --
--- 表的结构 `moba_feld`
+-- Table structure for table `moba_feld`
 --
 
 CREATE TABLE `moba_feld` (
-  `id` int(11) NOT NULL,
-  `typeid` int(100) NOT NULL,
-  `feldname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `textname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `remark` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `feldwidth` int(11) NOT NULL DEFAULT '50',
-  `checked` int(11) NOT NULL DEFAULT '1',
-  `paixu` int(11) NOT NULL DEFAULT '9999'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id` int NOT NULL,
+  `typeid` int NOT NULL,
+  `feldname` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `textname` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `remark` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `feldwidth` int NOT NULL DEFAULT '50',
+  `checked` int NOT NULL DEFAULT '1',
+  `paixu` int NOT NULL DEFAULT '9999'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
--- 转存表中的数据 `moba_feld`
+-- Dumping data for table `moba_feld`
 --
 
 INSERT INTO `moba_feld` (`id`, `typeid`, `feldname`, `textname`, `remark`, `feldwidth`, `checked`, `paixu`) VALUES
@@ -276,11 +275,11 @@ INSERT INTO `moba_feld` (`id`, `typeid`, `feldname`, `textname`, `remark`, `feld
 -- --------------------------------------------------------
 
 --
--- 表的结构 `moba_set`
+-- Table structure for table `moba_set`
 --
 
 CREATE TABLE `moba_set` (
-  `we_id` int(10) UNSIGNED NOT NULL,
+  `we_id` int UNSIGNED NOT NULL,
   `web_name` varchar(50) DEFAULT NULL,
   `goods_img` varchar(80) DEFAULT NULL,
   `web_titlel` varchar(200) DEFAULT NULL,
@@ -305,89 +304,89 @@ CREATE TABLE `moba_set` (
   `m_down` varchar(50) DEFAULT NULL,
   `we_youqlj1` varchar(50) DEFAULT NULL,
   `we_ceshi` varchar(500) DEFAULT NULL,
-  `checkd` int(10) DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `checkd` int DEFAULT '1'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
--- 转存表中的数据 `moba_set`
+-- Dumping data for table `moba_set`
 --
 
 INSERT INTO `moba_set` (`we_id`, `web_name`, `goods_img`, `web_titlel`, `we_con`, `we_gjz`, `we_gjzms`, `we_gjzms2`, `we_gjzms3`, `we_gjzms4`, `we_gjzms5`, `we_gjzms6`, `we_gjzms7`, `we_gjzms8`, `we_gjzms9`, `we_gjzms10`, `we_gjzms11`, `we_gjzms12`, `we_gjzms13`, `we_url`, `wei_yejiao`, `m_fahuo`, `m_down`, `we_youqlj1`, `we_ceshi`, `checkd`) VALUES
 (1, '', '../upload/202507281436271237.png', 'Fang Liu Group', NULL, 'Fang Liu Group', '© Copyright Fang Liu Group', 'Fang Liu Group', 'upload/202207250855435760.jpg', '', '', '', '../upload/20250413002634275.png', '', '', '', '', '', '', '', '', '', '', NULL, NULL, 1);
 
 --
--- 转储表的索引
+-- Indexes for dumped tables
 --
 
 --
--- 表的索引 `mobanqu_archives`
+-- Indexes for table `mobanqu_archives`
 --
 ALTER TABLE `mobanqu_archives`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `moba_admin_user`
+-- Indexes for table `moba_admin_user`
 --
 ALTER TABLE `moba_admin_user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- 表的索引 `moba_book`
+-- Indexes for table `moba_book`
 --
 ALTER TABLE `moba_book`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `moba_classt`
+-- Indexes for table `moba_classt`
 --
 ALTER TABLE `moba_classt`
   ADD PRIMARY KEY (`cat_id`);
 
 --
--- 表的索引 `moba_feld`
+-- Indexes for table `moba_feld`
 --
 ALTER TABLE `moba_feld`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `moba_set`
+-- Indexes for table `moba_set`
 --
 ALTER TABLE `moba_set`
   ADD PRIMARY KEY (`we_id`);
 
 --
--- 在导出的表使用AUTO_INCREMENT
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用表AUTO_INCREMENT `mobanqu_archives`
+-- AUTO_INCREMENT for table `mobanqu_archives`
 --
 ALTER TABLE `mobanqu_archives`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
--- 使用表AUTO_INCREMENT `moba_admin_user`
+-- AUTO_INCREMENT for table `moba_admin_user`
 --
 ALTER TABLE `moba_admin_user`
-  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- 使用表AUTO_INCREMENT `moba_book`
+-- AUTO_INCREMENT for table `moba_book`
 --
 ALTER TABLE `moba_book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- 使用表AUTO_INCREMENT `moba_classt`
+-- AUTO_INCREMENT for table `moba_classt`
 --
 ALTER TABLE `moba_classt`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `cat_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- 使用表AUTO_INCREMENT `moba_feld`
+-- AUTO_INCREMENT for table `moba_feld`
 --
 ALTER TABLE `moba_feld`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
