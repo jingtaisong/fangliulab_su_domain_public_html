@@ -1,43 +1,9 @@
+<!doctype html>
+<html>
 <?php
 define('IN_PHPWeb', true);
 include("./zy_quanxian.php");
-
-// TEMP: log errors to a file you can read
-ini_set('log_errors', '1');
-ini_set('error_log', __DIR__ . '/error_log.txt');
-error_reporting(E_ALL);
-
-// Same cookie params as logo.php, BEFORE session_start
-session_set_cookie_params([
-  'lifetime' => 0,
-  'path'     => '/',
-  'domain'   => $_SERVER['HTTP_HOST'],
-  'secure'   => !empty($_SERVER['HTTPS']),
-  'httponly' => true,
-  'samesite' => 'Lax',
-]);
-
-// If any output already happened, this will tell you exactly where
-if (headers_sent($f,$l)) { die("INDEX: headers already sent at $f:$l"); }
-
-session_start();
-
-error_log('INDEX SESSION: ' . json_encode($_SESSION));
-
-// TEMP: inspect what we got
-error_log('INDEX: SID=' . session_id()
-  . ' cookiePresent=' . (isset($_COOKIE[session_name()]) ? 'yes' : 'no')
-  . ' SESSION=' . json_encode($_SESSION));
-
-if (empty($_SESSION['user_name']) || empty($_SESSION['user_id'])) {
-  // TEMP: show a message instead of instant JS redirect so you can read logs
-  die('No session in zy_index.php; check error_log.txt');
-}
-
 ?>
-
-<!doctype html>
-<html>
 <head>
 <meta charset="UTF-8">
 <title>Management Center</title>
