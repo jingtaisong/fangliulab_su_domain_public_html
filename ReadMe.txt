@@ -34,10 +34,10 @@ After modifying content using admin, export the database to a new file mysql_new
 
 On Stanford domain dashboard, delete the database fangliul_web, re-create a database with the same name, remember to set the collation type to utf8_general_ci.
 You can also try dropping all existing tables instead of deleting the database.
-Import from the new file mysql_new.sql.
+Import from the new file mysql_new.sql (if doing this way, then no need to set collation type again).
 Test and confirm it works as expected.
 
-In git repository, use mysql_new.sql to overwrite the old mysql.sql. Update the git repository remotely to keep records.
+In git repository, use mysql_new.sql to overwrite the old mysql.sql. Update the git repository remotely to keep records (git push -u origin main).
 
 Then update the source code following the instruction in the next session.
 
