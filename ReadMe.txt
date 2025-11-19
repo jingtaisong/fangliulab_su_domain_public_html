@@ -46,6 +46,8 @@ Then update the source code following the instruction in the next session.
 How to update source code
 ========================================
 
+The source code is put in "File Manager" -> public_html directory on the SU domain dashboard (https://domains.stanford.edu/dashboard/).
+
 Empty trash.
 Delete all the existing files in public_html directory into trash.
 Compress the git directory into a .zip file.
