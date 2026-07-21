@@ -24,7 +24,7 @@ Host a local php webserver (e.g. MampPro)
 
 In MampPro, set the SiteFolder to be this git directory. Then:
 1. The website should be hosted at http://localhost:8888
-2. The admin can be accessed at http://localhost:8888/manasixvies
+2. The admin can be accessed at http://localhost:8888/manasixvies/zy_logo.php
 3. The phpMyAdmin page to manage database can be accessed at http://localhost:8888/phpMyAdmin
 
 If this is the first time, create database with name "fangliul_web", database user with name "fangliul_admin" and password "shanghai5487". If they need to be changed, also need to update
